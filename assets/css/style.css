@@ -1,0 +1,70 @@
+.navbar {
+    padding-top: 2px;
+}
+
+.logo img {
+    height: 90px;
+    margin-left: 40%;
+}
+
+.NavBar {
+    margin-right: 13%;
+}
+
+.NavBarLink {
+    margin-right: 10%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#contactos .nav-link{
+    border: 2px solid #007bff;
+    padding: 10px;
+    color: #007bff;
+}
+
+.carousel {
+    background-color: #f8f4f4;
+}
+
+.carouselStyle img{
+    height: 600px;
+    width: 600px;
+}
+
+.carouselStyle{
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.carousel h5{
+    font-style: bold;
+    font-size: 5rem;
+    color: black;
+}
+
+.carousel p{
+    margin-top: 5%;
+    color:black;
+}
+
+.btnCarousel{
+    border: 2px solid #007bff;
+    margin-top: 3%;
+    padding: 10px 30px 10px 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #007bff;
+}
+
+.carousel-indicators button {
+    background-color: #007bff; /* Cor de fundo */
+    width: 100px; /* Largura */
+    height: 5px; /* Altura */
+}
+
+.carousel-indicators button.active {
+    background-color: #007bff; /* Cor do indicador ativo */
+    width: 90px; /* Largura */
+    height: 6px; /* Altura */
+}
