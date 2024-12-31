@@ -43,19 +43,51 @@
     background-color: #f8f4f4;
 }
 
+.carousel .carousel-item:nth-child(2) {
+    background-color: black; /* Fundo preto para o segundo slide */
+    color: white; /* Garante que o texto fique visível */
+}
+
 .carousel-inner button:hover{
     color: white !important; /* Cor do texto ao passar o mouse */
     background-color: #007bff; /* Fundo azul */
 }
 
-.carouselStyle img{
+.carouselStyleSlide1 img{
     height: 600px;
     width: 600px;
 }
 
-.carouselStyle{
+.carouselStyleSlide1{
     margin-right: 12%;
     margin-left: 12%;
+}
+
+.carouselStyleSlide2 img{
+    height: 600px;
+    width: 600px;
+}
+
+.carouselStyleSlide2{
+    margin-right: 12%;
+    margin-left: 12%;
+}
+
+.bg-dark-slide .btnCarousel {
+    color: white; /* Cor do botão */
+    background-color: black; /* Fundo do botão */
+    border: 2px solid white; /* Borda do botão */
+}
+
+.bg-dark-slide .btnCarousel:hover {
+    background-color: white; /* Cor de fundo ao passar o mouse */
+    color: black !important; /* Cor do texto ao passar o mouse */
+}
+
+.bg-dark-slide h1 {
+    font-weight: bolder;
+    font-size: 5rem;
+    color: white !important;
 }
 
 .carousel h1{
@@ -112,22 +144,23 @@
 .exploraMundo {
     position: relative;
     width: 100%; /* O container ocupa toda a largura */
-    height: auto; /* Altura ajustada ao conteúdo */
-    background-image: url('assets/img/Fundo_Explora_O_Mundo.png');
-    background-size: cover; /* Preenche o container sem distorção */
+    height: 600px; /* Define a altura da imagem */
+    background-image: url('../img/FundoExploraOMundo.png'); /* Usa a imagem como fundo */
+    background-size: cover; /* Faz a imagem preencher o container */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição */
-    padding-right: 0%;
-    padding-left: 0%;
-    margin-bottom: 5%;
+    overflow: hidden; /* Garante que o texto não saia do container */
 }
 
 .text-overlay {
-    position: absolute;
+    position: absolute; /* O texto é posicionado relativo ao container pai */
     top: 50%; /* Centraliza verticalmente */
     left: 50%; /* Centraliza horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta o alinhamento */
-    width: 65%; /* Ajusta a largura do texto */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Adiciona espaçamento interno */
+    width: 90%; /* Mantém o texto dentro do container */
 }
 
 .sobreNosTitulo h1{
