@@ -248,3 +248,39 @@
     color: white !important; /* Cor do texto ao passar o mouse */
     background-color: #007bff !important; /* Fundo azul */
 }
+
+.descricao {
+    background-color: #f8f4f4;
+}
+
+.descricao {
+    margin: 1% 0% 2% 0%;
+    padding: 2% 3% 2% 3%;
+}
+
+.descricao p{
+    font-weight: 500;
+    font-size: 1.1rem;
+    color:rgb(95, 93, 93);
+}
+
+.descricao p:first-of-type{
+    margin-top: 2%;
+}
+
+.descricao ul {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color:rgb(53, 53, 53);
+}
+
+.formContacto label{
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+}
+
+.formContacto a {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
