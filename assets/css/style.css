@@ -28,6 +28,11 @@
     font-weight: 500;
 }
 
+#contactos .nav-link:hover {
+    color: white !important; /* Cor do texto ao passar o mouse */
+    background-color: #007bff; /* Fundo azul */
+}
+
 #contactos .nav-link{
     border: 2px solid #007bff;
     padding: 10px;
@@ -36,6 +41,11 @@
 
 .carousel {
     background-color: #f8f4f4;
+}
+
+.carousel-inner button:hover{
+    color: white !important; /* Cor do texto ao passar o mouse */
+    background-color: #007bff; /* Fundo azul */
 }
 
 .carouselStyle img{
@@ -79,6 +89,11 @@
     font-size: 2rem;
     color: black;
     padding-bottom: 10%;
+}
+
+.exploraMundo button:hover {
+    outline: 2px solid black; /* Simula a borda interna */
+    outline-offset: -2px; /* Move a borda para dentro */
 }
 
 .exploraMundo h1{
@@ -214,3 +229,22 @@
     padding-bottom: 8px;
 }
 
+.divisoria {
+    border: 2px solid rgb(61, 60, 60);
+}
+
+#copyright {
+    color: rgb(68, 67, 67);
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.estudantes button:hover {
+    color: white !important; /* Cor do texto ao passar o mouse */
+    background-color: #007bff; /* Fundo azul */
+}
+
+.socialMedia a:hover {
+    color: white !important; /* Cor do texto ao passar o mouse */
+    background-color: #007bff !important; /* Fundo azul */
+}
