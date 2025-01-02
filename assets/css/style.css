@@ -16,7 +16,7 @@ body {
 
 .navbarFooter {
     padding-top: 2px;
-    margin-right: 9%;
+    margin-right: 15%;
 }
 
 .footer {
@@ -32,7 +32,11 @@ body {
 }
 
 .NavBar {
-    margin-right: 13%;
+    padding-right: 17%;
+}
+
+.NavBarSobre {
+    padding-right: 9%;
 }
 
 .NavBarLink {
@@ -272,8 +276,8 @@ body {
 }
 
 .card-body {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .divisoria {
@@ -353,4 +357,19 @@ body {
 .pesquisa .btn {
     margin-left: 3%;
     border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na direita */
+}
+
+.estudanteHenrique {
+    background-color: #f8f4f4;
+}
+
+.estudanteDinis {
+    
+}
+
+.estudante {
+    max-height: 500px; /* Define a altura máxima da imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorção */
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+    padding: 7%;
 }
