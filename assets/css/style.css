@@ -1,3 +1,15 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar {
     padding-top: 2px;
 }
@@ -11,6 +23,7 @@
     background-color: #f8f4f4;
     padding-top: 3%;
     justify-content: center;
+    margin-top: auto;
 }
 
 .logo img {
@@ -150,6 +163,7 @@
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição */
     overflow: hidden; /* Garante que o texto não saia do container */
+    flex-shrink: 0; /* Impede que o elemento diminua ou colapse */
 }
 
 .text-overlay {
@@ -316,4 +330,27 @@
 .formContacto a {
     margin-top: 2%;
     margin-bottom: 2%;
+}
+
+.pesquisa {
+    background-color: #f8f4f4;
+    display: flex;
+    justify-content: left; /* Centraliza o formulário horizontalmente */
+    padding: 1% 1% 1% 3%; /* Espaçamento ao redor */
+}
+
+.pesquisa .form-inline {
+    width: 100%; /* Ocupa toda a largura do container */
+    max-width: 30%; /* Define um limite para o tamanho do formulário */
+    display: flex;
+}
+
+.pesquisa .form-control {
+    flex: 1; /* Faz o campo de pesquisa ocupar o máximo de espaço disponível */
+    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na esquerda */
+}
+
+.pesquisa .btn {
+    margin-left: 3%;
+    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na direita */
 }
