@@ -1,3 +1,15 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar {
     padding-top: 2px;
 }
@@ -11,6 +23,7 @@
     background-color: #f8f4f4;
     padding-top: 3%;
     justify-content: center;
+    margin-top: auto;
 }
 
 .logo img {
@@ -150,6 +163,7 @@
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição */
     overflow: hidden; /* Garante que o texto não saia do container */
+    flex-shrink: 0; /* Impede que o elemento diminua ou colapse */
 }
 
 .text-overlay {
@@ -316,4 +330,77 @@
 .formContacto a {
     margin-top: 2%;
     margin-bottom: 2%;
+}
+
+.pesquisa {
+    background-color: #f8f4f4;
+    display: flex;
+    justify-content: left; /* Centraliza o formulário horizontalmente */
+    padding: 1% 1% 1% 3%; /* Espaçamento ao redor */
+}
+
+.pesquisa .form-inline {
+    width: 100%; /* Ocupa toda a largura do container */
+    max-width: 30%; /* Define um limite para o tamanho do formulário */
+    display: flex;
+}
+
+.pesquisa .form-control {
+    flex: 1; /* Faz o campo de pesquisa ocupar o máximo de espaço disponível */
+    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na esquerda */
+}
+
+.pesquisa .btn {
+    margin-left: 3%;
+    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na direita */
+}
+
+.card-paisaleatorio {
+    height: 100%;
+    border: 2px solid #373737;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #f8f4f4;
+}
+.card-paisaleatorio img {
+    height: 200px;
+    object-fit: cover;
+    padding: 15px;
+}
+.card-paisaleatorio-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-paisaleatorio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: #007bff;
+}
+
+.detalhescontainer {
+    background-color: #f8f4f4;
+    flex-wrap: wrap;
+}
+
+.country-name {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.flag-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    left: 10%;
+}
+.country-info {
+    font-size: 1.2rem;
+    line-height: 1.5;
 }

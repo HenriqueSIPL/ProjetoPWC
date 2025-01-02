@@ -1,11 +1,13 @@
- // Função para buscar dados da API e gerar os cards
- async function fetchAndDisplayCountries() {
+async function fetchRandomCountries() {
     try {
         const response = await fetch('https://restcountries.com/v3.1/all');
         const countries = await response.json();
+
+        // Selecionar 3 países aleatórios
+        const randomCountries = countries.sort(() => 0.5 - Math.random()).slice(0, 3);
         const container = document.getElementById('countries-container');
 
-        countries.forEach(country => {
+        randomCountries.forEach(country => {
             const countryName = country.name.common;
             const flagUrl = country.flags.svg || country.flags.png;
 
@@ -14,10 +16,10 @@
 
             card.innerHTML = `
                 <a href="detalhespaises.html?name=${encodeURIComponent(countryName)}" class="text-decoration-none text-dark">
-                    <div class="card">
-                        <img src="${flagUrl}" class="card-img-top" alt="${countryName} flag">
-                        <div class="card-body">
-                            <p class="card-text">${countryName}</p>
+                    <div class="card-paisaleatorio h-100">
+                        <img src="${flagUrl}" class="card-paisaleatorio-img-top" alt="${countryName} flag">
+                        <div class="card-paisaleatorio-body">
+                            <p class="card-paisaleatorio-text">${countryName}</p>
                         </div>
                     </div>
                 </a>
@@ -30,5 +32,4 @@
     }
 }
 
-// Chama a função para buscar e exibir os países
-fetchAndDisplayCountries();
+fetchRandomCountries();
