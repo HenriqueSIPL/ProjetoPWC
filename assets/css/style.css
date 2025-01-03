@@ -350,6 +350,12 @@ body {
     border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na esquerda */
 }
 
+@media (max-width: 576px) {
+    .pesquisa .form-control {
+        width: auto;         /* Aumenta a largura da barra de pesquisa para 100% da largura da tela */
+    }
+}
+
 .pesquisa .btn {
     margin-left: 3%;
     border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na direita */
@@ -364,7 +370,8 @@ body {
     background-color: #f8f4f4;
 }
 .card-paisaleatorio img {
-    height: 200px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     padding: 15px;
 }
