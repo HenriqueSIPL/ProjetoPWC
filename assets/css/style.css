@@ -16,7 +16,7 @@ body {
 
 .navbarFooter {
     padding-top: 2px;
-    margin-right: 9%;
+    margin-right: 15%;
 }
 
 .footer {
@@ -32,7 +32,11 @@ body {
 }
 
 .NavBar {
-    margin-right: 13%;
+    padding-right: 17%;
+}
+
+.NavBarSobre {
+    padding-right: 9%;
 }
 
 .NavBarLink {
@@ -186,7 +190,7 @@ body {
 
 .sobreNosCardTexto p{
     color: rgb(91, 91, 92);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .sobreNosCardTexto h5{
@@ -272,8 +276,8 @@ body {
 }
 
 .card-body {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .divisoria {
@@ -359,6 +363,18 @@ body {
 .pesquisa .btn {
     margin-left: 3%;
     border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na direita */
+}
+
+.estudanteHenrique {
+    background-color: #f8f4f4;
+}
+
+.estudanteImg {
+    max-height: 500px; /* Altura máxima da imagem */
+    max-width: 100%; /* Largura máxima proporcional */
+    object-fit: cover; /* Ajusta a imagem sem distorção */
+    border-radius: 10px; /* Mantém os cantos arredondados */
+    padding: 7%;
 }
 
 .card-paisaleatorio {
