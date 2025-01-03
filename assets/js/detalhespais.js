@@ -15,23 +15,23 @@ async function fetchCountryDetails() {
         const countryDetails = `
             <div class="country-name">${country.name.common}</div>
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <img src="${country.flags.svg || country.flags.png}" alt="${country.name.common} flag" class="flag-img">
                 </div>
-                <div class="col-md-6 country-info">
-                    <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : 'N/A'}</p>
-                    <p><strong>Região:</strong> ${country.region}</p>
-                    <p><strong>Sub-região:</strong> ${country.subregion || 'N/A'}</p>
-                    <p><strong>População:</strong> ${country.population.toLocaleString()}</p>
-                    <p><strong>Área:</strong> ${country.area.toLocaleString()} km²</p>
-                    <p><strong>Moeda:</strong> ${Object.values(country.currencies || {}).map(currency => `${currency.name} (${currency.symbol})`).join(', ')}</p>
-                    <p><strong>Idiomas:</strong> ${Object.values(country.languages || {}).join(', ')}</p>
-                    <p><strong>Fuso horário:</strong> ${country.timezones.join(', ')}</p>
-                    <p><strong>Fronteiras:</strong> ${country.borders ? country.borders.join(', ') : 'Nenhuma'}</p>
+                <div class="container col-md-5">
+                    <div class="country-info">
+                        <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : 'N/A'}</p>
+                        <p><strong>Região:</strong> ${country.region}</p>
+                        <p><strong>Sub-região:</strong> ${country.subregion || 'N/A'}</p>
+                        <p><strong>População:</strong> ${country.population.toLocaleString()}</p>
+                        <p><strong>Área:</strong> ${country.area.toLocaleString()} km²</p>
+                        <p><strong>Moeda:</strong> ${Object.values(country.currencies || {}).map(currency => `${currency.name} (${currency.symbol})`).join(', ')}</p>
+                        <p><strong>Idiomas:</strong> ${Object.values(country.languages || {}).join(', ')}</p>
+                        <p><strong>Fuso horário:</strong> ${country.timezones.join(', ')}</p>
+                        <p><strong>Fronteiras:</strong> ${country.borders ? country.borders.join(', ') : 'Nenhuma'}</p>
+                        <button id="add-to-favoritzes" class="btn btn-primary">Adicionar aos Favoritos</button>
+                    </div>
                 </div>
-            </div>
-            <div class="text-center mt-4">
-                <button id="add-to-favorites" class="btn btn-primary">Adicionar aos Favoritos</button>
             </div>
         `;
 
