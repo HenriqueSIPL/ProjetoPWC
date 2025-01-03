@@ -26,12 +26,12 @@ function displayFavorites() {
         card.className = 'col-md-4 mb-4';
         card.innerHTML = `
             <a href="detalhespaises.html?name=${encodeURIComponent(country.name)}" class="text-decoration-none text-dark">
-                <div class="card">
-                    <img src="${country.flag}" class="card-img-top" alt="${country.name} flag">
-                    <div class="card-body">
+                <div class="card-favoritos">
+                    <img src="${country.flag}" class="card-img-top cardFavoritosImg" alt="${country.name} flag">
+                    <div class="card-favoritos-body">
                         <h5 class="card-title">${country.name}</h5>
-                        <button class="btn btn-danger btn-sm remove-favorite" data-name="${country.name}">Remover</button>
                     </div>
+                    <button class="btn btn-danger btn-sm remove-favorite" data-name="${country.name}">Remover</button>
                 </div>
             </a>
         `;
