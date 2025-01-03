@@ -358,18 +358,3 @@ body {
     margin-left: 3%;
     border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na direita */
 }
-
-.estudanteHenrique {
-    background-color: #f8f4f4;
-}
-
-.estudanteDinis {
-    
-}
-
-.estudante {
-    max-height: 500px; /* Define a altura máxima da imagem */
-    object-fit: cover; /* Ajusta a imagem sem distorção */
-    width: 100%; /* Garante que a imagem ocupe toda a largura */
-    padding: 7%;
-}
