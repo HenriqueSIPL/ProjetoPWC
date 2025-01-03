@@ -428,7 +428,8 @@ body {
     height: 100%; 
     border: 1px solid #ddd; 
     border-radius: 8px; 
-    overflow: hidden; 
+    overflow: hidden;
+    background-color: #f8f4f4; 
 }
 
 /* Ajuste das imagens */
@@ -451,4 +452,45 @@ body {
 .card-paises a {
     text-decoration: none;
     color: inherit;
+}
+
+/* Estilo do card */
+.card-fav {
+    height: 350px; /* Altura fixa */
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem do card */
+.card-fav-img-top {
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+}
+
+/* Corpo do card */
+.card-fav-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinha o conteúdo */
+    flex-grow: 1; /* Expande o conteúdo para preencher a altura disponível */
+}
+
+/* Título e conteúdo */
+.card-fav-body .card-fav-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-fav-body .card-fav-text {
+    font-size: 1rem;
+}
+
+/* Estilo do botão */
+.btn {
+    margin-top: auto; /* Faz com que o botão vá para o fundo do card */
 }
