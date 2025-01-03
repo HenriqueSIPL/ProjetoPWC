@@ -14,10 +14,10 @@
 
             card.innerHTML = `
                 <a href="detalhespaises.html?name=${encodeURIComponent(countryName)}" class="text-decoration-none text-dark">
-                    <div class="card">
-                        <img src="${flagUrl}" class="card-img-top" alt="${countryName} flag">
-                        <div class="card-body">
-                            <p class="card-text">${countryName}</p>
+                    <div class="card-paises">
+                        <img src="${flagUrl}" class="card-paises-img-top" alt="${countryName} flag">
+                        <div class="card-paises-body">
+                            <p class="card-paises-text">${countryName}</p>
                         </div>
                     </div>
                 </a>

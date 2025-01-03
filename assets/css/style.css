@@ -404,3 +404,35 @@ body {
     font-size: 1.2rem;
     line-height: 1.5;
 }
+
+.card-paises {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+/* Ajuste das imagens */
+.card-paises img {
+    height: 250px; 
+    object-fit: cover; 
+    width: 100%; 
+}
+
+/* Conteúdo do card */
+.card-paises-body {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+/* Links do card */
+.card-paises a {
+    text-decoration: none;
+    color: inherit;
+}
