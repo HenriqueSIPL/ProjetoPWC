@@ -190,7 +190,7 @@ body {
 
 .sobreNosCardTexto p{
     color: rgb(91, 91, 92);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .sobreNosCardTexto h5{
@@ -357,6 +357,18 @@ body {
 .pesquisa .btn {
     margin-left: 3%;
     border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na direita */
+}
+
+.estudanteHenrique {
+    background-color: #f8f4f4;
+}
+
+.estudanteImg {
+    max-height: 500px; /* Altura máxima da imagem */
+    max-width: 100%; /* Largura máxima proporcional */
+    object-fit: cover; /* Ajusta a imagem sem distorção */
+    border-radius: 10px; /* Mantém os cantos arredondados */
+    padding: 7%;
 }
 
 .card-paisaleatorio {
