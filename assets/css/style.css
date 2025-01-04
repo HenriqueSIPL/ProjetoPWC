@@ -35,6 +35,14 @@ body {
     }
 }
 
+.cardPaises { /* Para telas com largura entre 768px e 1400px, os cards terão col-md-6 */
+    @media (min-width: 768px) and (max-width: 1400px) {
+        .col-md-4 {
+            width: 50%; /* Isso fará os cards ocuparem 50% da largura, ou seja, 2 por linha */
+        }
+    }
+}
+
 .cardHome {
     @media (min-width: 964px) and (max-width: 1196px){
         .col-md-3, .col-md-6 {
