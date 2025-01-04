@@ -9,7 +9,7 @@ function validateForm() {
         hideError("email");
     }
 
-    return isValid;  // Retorna true se o formulário for válido, caso contrário retorna false
+    return isValid;
 }
 
 function validateEmail(email) {
@@ -28,15 +28,14 @@ function hideError(fieldId) {
     erroDiv.style.display = "none";
 }
 
-// Carregamento da página
-document.getElementById("form2").addEventListener("submit", function(event) {
-    // Previne o envio do formulário
+
+document.getElementById("form").addEventListener("submit", function(event) {
+
     event.preventDefault();
 
-    // Chama a validação do formulário
     if (validateForm()) {
         console.log("Submissao");
-        // Aqui você pode adicionar o código para enviar o formulário ou fazer outra ação
+
     } else {
         console.log("Formulário inválido");
     }

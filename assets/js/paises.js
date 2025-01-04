@@ -1,15 +1,14 @@
 let countriesData = [];
-let originalCountriesData = [];  // Armazena os dados originais
+let originalCountriesData = [];
 let currentPage = 1;
 const itemsPerPage = 9;
 const $pagination = document.getElementById('pagination');
 
-// Função para buscar dados da API e gerar os cards
 async function fetchAndDisplayCountries() {
     try {
         const response = await fetch('https://restcountries.com/v3.1/all');
         countriesData = await response.json();
-        originalCountriesData = [...countriesData]; // Armazena uma cópia dos dados originais
+        originalCountriesData = [...countriesData];
         displayCountries();
         setupPagination();
     } catch (error) {
@@ -17,10 +16,9 @@ async function fetchAndDisplayCountries() {
     }
 }
 
-// Função para exibir os países no container
 function displayCountries() {
     const container = document.getElementById('countries-container');
-    container.innerHTML = ''; // Limpa o container antes de exibir os novos resultados
+    container.innerHTML = '';
 
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
@@ -48,21 +46,19 @@ function displayCountries() {
     });
 }
 
-// Configurar Paginação
+
 function setupPagination() {
     $pagination.innerHTML = '';
     const totalPages = Math.ceil(countriesData.length / itemsPerPage);
 
     if (totalPages === 0) return;
 
-    // Anterior
     $pagination.innerHTML += `
         <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
             <a class="page-link" href="#" data-page="${currentPage - 1}">&laquo;</a>
         </li>
     `;
 
-    // Calcular intervalo
     let startPage = Math.max(1, currentPage - 2);
     let endPage = Math.min(totalPages, currentPage + 2);
 
@@ -74,14 +70,12 @@ function setupPagination() {
         `;
     }
 
-    // Próximo
     $pagination.innerHTML += `
         <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
             <a class="page-link" href="#" data-page="${currentPage + 1}">&raquo;</a>
         </li>
     `;
 
-    // Mudar de Página
     document.querySelectorAll('.page-link').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -95,25 +89,21 @@ function setupPagination() {
     });
 }
 
-// Evento de pesquisa
 document.getElementById('searchForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Evita o reload da página
+    event.preventDefault();
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     
     if (searchInput === '') {
-        // Se o campo de pesquisa estiver vazio, restaura a lista completa
         countriesData = [...originalCountriesData];
     } else {
-        // Filtra os países com base no nome
         countriesData = originalCountriesData.filter(country =>
             country.name.common.toLowerCase().includes(searchInput)
         );
     }
     
-    currentPage = 1; // Reinicia para a primeira página
+    currentPage = 1;
     displayCountries();
     setupPagination();
 });
 
-// Chama a função para buscar e exibir os países
 fetchAndDisplayCountries();
