@@ -3,7 +3,6 @@ async function fetchRandomCountries() {
         const response = await fetch('https://restcountries.com/v3.1/all');
         const countries = await response.json();
 
-        // Selecionar 3 países aleatórios
         const randomCountries = countries.sort(() => 0.5 - Math.random()).slice(0, 3);
         const container = document.getElementById('countries-container');
 

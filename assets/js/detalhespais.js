@@ -37,7 +37,6 @@ async function fetchCountryDetails() {
 
         document.getElementById('country-details').innerHTML = countryDetails;
 
-        // Adicionar evento ao botão "Adicionar aos Favoritos"
         const button = document.getElementById('add-to-favorites');
         if (button) {
             console.log('Botão encontrado, adicionando evento...');
@@ -53,12 +52,10 @@ async function fetchCountryDetails() {
     }
 }
 
-// Função para salvar país nos Favoritos usando localStorage
 function addToFavorites(country) {
-    // Garantir que o localStorage seja um array válido
     const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
 
-    console.log('Favoritos antes de adicionar:', favorites); // Verificando se favoritos estão corretos
+    console.log('Favoritos antes de adicionar:', favorites);
     
     const exists = favorites.find(item => item.name === country.name.common);
     if (!exists) {
@@ -74,6 +71,4 @@ function addToFavorites(country) {
     }
 }
 
-
-// Chama a função para buscar os detalhes do país
 fetchCountryDetails();
