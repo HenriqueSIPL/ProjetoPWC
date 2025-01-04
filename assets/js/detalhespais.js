@@ -13,30 +13,64 @@ async function fetchCountryDetails() {
         const country = countryData[0];
 
         const countryDetails = `
-            <div class="country-name">${country.name.common}</div>
-            <div class="row align-items-center">
-                <div class="col-md-5">
-                    <img src="${country.flags.svg || country.flags.png}" alt="${country.name.common} flag" class="flag-img">
-                </div>
-                <div class="container col-md-5">
-                    <div class="country-info">
-                        <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : 'N/A'}</p>
-                        <p><strong>Região:</strong> ${country.region}</p>
-                        <p><strong>Sub-região:</strong> ${country.subregion || 'N/A'}</p>
-                        <p><strong>População:</strong> ${country.population.toLocaleString()}</p>
-                        <p><strong>Área:</strong> ${country.area.toLocaleString()} km²</p>
-                        <p><strong>Moeda:</strong> ${Object.values(country.currencies || {}).map(currency => `${currency.name} (${currency.symbol})`).join(', ')}</p>
-                        <p><strong>Idiomas:</strong> ${Object.values(country.languages || {}).join(', ')}</p>
-                        <p><strong>Fuso horário:</strong> ${country.timezones.join(', ')}</p>
-                        <p><strong>Fronteiras:</strong> ${country.borders ? country.borders.join(', ') : 'Nenhuma'}</p>
-                        <button id="add-to-favoritzes" class="btn btn-primary">Adicionar aos Favoritos</button>
-                    </div>
-                </div>
+           <div class="country-name text-center">${country.name.common}</div>
+    <div class="row align-items-center">
+        <div class="col-md-5 text-center">
+            <img src="${country.flags.svg || country.flags.png}" alt="${country.name.common} flag" class="flag-img">
+        </div>
+        <div class="col-md-6">
+            <table class="table table-striped detalhes mx-auto">
+                <tbody>
+                    <tr>
+                        <th scope="row">Capital</th>
+                        <td>${country.capital ? country.capital[0] : 'N/A'}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Região</th>
+                        <td>${country.region}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sub-região</th>
+                        <td>${country.subregion || 'N/A'}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">População</th>
+                        <td>${country.population.toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Área</th>
+                        <td>${country.area.toLocaleString()} km²</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Moeda</th>
+                        <td>${Object.values(country.currencies || {})
+                            .map(currency => `${currency.name} (${currency.symbol})`)
+                            .join(', ')}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Idiomas</th>
+                        <td>${Object.values(country.languages || {}).join(', ')}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fuso horário</th>
+                        <td>${country.timezones.join(', ')}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fronteiras</th>
+                        <td>${country.borders ? country.borders.join(', ') : 'Nenhuma'}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center mt-3">
+                <button id="add-to-favorites" class="btn btn-primary">Adicionar aos Favoritos</button>
             </div>
+        </div>
+    </div>
         `;
 
         document.getElementById('country-details').innerHTML = countryDetails;
 
+        // Adicionar evento ao botão "Adicionar aos Favoritos"
         const button = document.getElementById('add-to-favorites');
         if (button) {
             console.log('Botão encontrado, adicionando evento...');
@@ -52,11 +86,10 @@ async function fetchCountryDetails() {
     }
 }
 
+// Função para salvar país nos Favoritos usando localStorage
 function addToFavorites(country) {
     const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
 
-    console.log('Favoritos antes de adicionar:', favorites);
-    
     const exists = favorites.find(item => item.name === country.name.common);
     if (!exists) {
         favorites.push({
@@ -71,4 +104,6 @@ function addToFavorites(country) {
     }
 }
 
+
+// Chama a função para buscar os detalhes do país
 fetchCountryDetails();
