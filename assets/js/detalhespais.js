@@ -13,7 +13,7 @@ async function fetchCountryDetails() {
         const country = countryData[0];
 
         const countryDetails = `
-            <div class="country-name text-center">${country.name.common}</div>
+           <div class="country-name text-center">${country.name.common}</div>
     <div class="row align-items-center">
         <div class="col-md-5 text-center">
             <img src="${country.flags.svg || country.flags.png}" alt="${country.name.common} flag" class="flag-img">
@@ -62,7 +62,7 @@ async function fetchCountryDetails() {
                 </tbody>
             </table>
             <div class="text-center mt-3">
-                <button id="add-to-favoritzes" class="btn btn-primary">Adicionar aos Favoritos</button>
+                <button id="add-to-favorites" class="btn btn-primary">Adicionar aos Favoritos</button>
             </div>
         </div>
     </div>
@@ -88,11 +88,8 @@ async function fetchCountryDetails() {
 
 // Função para salvar país nos Favoritos usando localStorage
 function addToFavorites(country) {
-    // Garantir que o localStorage seja um array válido
     const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
 
-    console.log('Favoritos antes de adicionar:', favorites); // Verificando se favoritos estão corretos
-    
     const exists = favorites.find(item => item.name === country.name.common);
     if (!exists) {
         favorites.push({

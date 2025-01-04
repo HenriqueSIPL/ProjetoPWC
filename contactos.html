@@ -11,37 +11,34 @@
 
     <body>
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg">
-                <div class="align-items-center logo">
-                    <img src="assets/img/Logoipl.png" alt="">
+            <nav class="navbar navbar-expand-xl align-items-center d-flex">
+                <div class="logo">
+                    <img src="assets/img/Logoipl.png" alt="Logo" class="img-fluid">
                 </div>
-                <div class="container">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse justify-content-end NavBar" id="navbarSupportedContent">
-                        <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
-                            <li class="nav-item NavBarLink">
-                                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-                            </li>
-                            <li class="nav-item NavBarLink">
-                                <a class="nav-link active" href="paises.html">Países</a>
-                            </li>
-                            <li class="nav-item NavBarLink">
-                                <a class="nav-link disabled" aria-disabled="true">Loja</a>
-                            </li>
-                            <li class="nav-item NavBarLink">
-                                <a class="nav-link active" href="favoritos.html">Favoritos</a>
-                            </li>
-                            <li class="nav-item NavBarLink">
-                                <a class="nav-link active" href="sobre.html">Sobre</a>
-                            </li>
-                            <li class="nav-item NavBarLink" id="contactos">
-                                <a class="nav-link active" href="contactos.html">Contactos</a>
-                            </li>
-                        </ul>
-                    </div>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto align-items-center">
+                        <li class="nav-item NavBarLink">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item NavBarLink">
+                            <a class="nav-link active" href="paises.html">Países</a>
+                        </li>
+                        <li class="nav-item NavBarLink">
+                            <a class="nav-link disabled" aria-disabled="true">Loja</a>
+                        </li>
+                        <li class="nav-item NavBarLink">
+                            <a class="nav-link active" href="favoritos.html">Favoritos</a>
+                        </li>
+                        <li class="nav-item NavBarLink">
+                            <a class="nav-link active" href="sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item NavBarLink" id="contactos">
+                            <a class="nav-link active" href="contactos.html">Contactos</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -56,17 +53,20 @@
                 </ul>
                 <p>Para qualquer questão ou sugestão. Não hesite em entrar em contacto connosco a partir do formulário!</p>
             </div>
-            <div class="container formContacto">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <form id="form2">
+                <div class="container formContacto">
+                    <div class="mb-3" id="emailInput">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <div id="email-error" class="error" style="display: none;"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button class="btn btn-primary mb-3" type="submit">Enviar Mensagem</button>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <a href="contactos.html" class="btn btn-primary mb-3" role="button">Enviar Mensagem</a>
-            </div>
+            </form>
             
             <div class="container" style="padding-bottom: 2%;">
                 <div class="socialMedia" style="display: flex; justify-content: left; align-items: center; flex-wrap: wrap; gap: 10px;">
@@ -94,7 +94,7 @@
                 <img src="assets/img/Logoipl.png" alt="Logo" class="img-fluid mx-auto d-block">
             </div>
             <div class="container">
-                <nav class="navbar navbar-expand-lg navbarFooter">
+                <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid justify-content-center">
                         <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
                             <li class="nav-item NavBarLink">
@@ -153,6 +153,7 @@
             <hr class="divisoria">         
             <h5 id="copyright">© 2024 Direitos de Autor, Todos os direitos reservados</h5>                         
         </div>
+        <script src="assets/js/contactos.js"></script>
         <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/contactos.js"></script>
     </body>

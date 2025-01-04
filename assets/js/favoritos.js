@@ -1,6 +1,4 @@
-// Função para exibir os Favoritos armazenados no localStorage
 function displayFavorites() {
-    // Garantir que o container existe antes de manipular o DOM
     const container = document.getElementById('favorites-container');
     
     if (!container) {
@@ -8,7 +6,6 @@ function displayFavorites() {
         return;
     }
 
-    // Garantir que estamos lidando com dados válidos no localStorage
     let favorites = [];
     try {
         favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -38,7 +35,6 @@ function displayFavorites() {
         container.appendChild(card);
     });
 
-    // Adicionar eventos para remover favoritos
     document.querySelectorAll('.remove-favorite').forEach(button => {
         button.addEventListener('click', event => {
             event.preventDefault();
@@ -48,16 +44,14 @@ function displayFavorites() {
     });
 }
 
-// Função para remover um país dos Favoritos
 function removeFromFavorites(name) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     favorites = favorites.filter(country => country.name !== name);
     localStorage.setItem('favorites', JSON.stringify(favorites));
     alert(`${name} foi removido dos Favoritos.`);
-    location.reload(); // Atualiza a página para refletir a remoção
+    location.reload();
 }
 
-// Certifique-se de que o DOM esteja carregado antes de chamar a função
 document.addEventListener('DOMContentLoaded', () => {
     displayFavorites();
 });

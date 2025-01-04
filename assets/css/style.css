@@ -10,34 +10,72 @@ body {
     flex-direction: column;
 }
 
-@media (max-width: 767px) {
-    /* CAROUSEL */
-    /* CAROUSEL */
+@media (max-width: 1020px) {
     #carouselExampleCaptions .carousel-item img {
         display: none;
     }
 
-    /* Ajusta o padding do texto */
     #carouselExampleCaptions .carousel-item .text-start {
-        padding: 50px; /* Espaçamento horizontal */
+        padding: 50px;
     }
+}
 
-    /* NAVBAR */
-    /* NAVBAR */
-    .navbar-toggler {
-        position: absolute; /* Faz o botão flutuar à direita */
-        right: 4%; /* Ajusta a distância à direita conforme necessário */
-        bottom: 30%;
+@media (max-width: 1000px) {
+    .pesquisa .form-control {
+        width: auto;
     }
+}
 
-    /* Ajusta os itens da navbar para ficarem mais próximos do lado direito na versão mobile */
-    .navbar-nav {
-        margin-left: 21%; /* Empurra os itens de navegação para a direita */
+@media (max-width: 576px) {
+    .flag-img {
+        height: 300px;
+        margin-left: 1%;
+        margin-right: 100%;
+        margin-bottom: 2%;
+    }
+}
+
+.cardHome {
+    @media (min-width: 964px) and (max-width: 1196px){
+        .col-md-3, .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.cardHome {
+    @media (max-width: 963px){
+        .col-md-3, .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.cardSobre {
+    @media (max-width: 963px) {
+        .col-md-3, .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
 }
 
 .navbar {
     padding-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbarFooter {
@@ -45,20 +83,18 @@ body {
     margin-right: 15%;
 }
 
+.container-fluid.footer .navbar-nav .nav-item {
+    margin: 10px;
+}
+
 .footer {
     background-color: #f8f4f4;
     padding-top: 3%;
-    justify-content: center;
-    margin-top: auto;
 }
 
 .logo img {
     height: 90px;
     margin-left: 40%;
-}
-
-.NavBar {
-    padding-right: 17%;
 }
 
 .NavBarSobre {
@@ -72,8 +108,8 @@ body {
 }
 
 #contactos .nav-link:hover {
-    color: white !important; /* Cor do texto ao passar o mouse */
-    background-color: #007bff; /* Fundo azul */
+    color: white !important;
+    background-color: #007bff;
 }
 
 #contactos .nav-link{
@@ -87,13 +123,13 @@ body {
 }
 
 .carousel .carousel-item:nth-child(2) {
-    background-color: black; /* Fundo preto para o segundo slide */
-    color: white; /* Garante que o texto fique visível */
+    background-color: black;
+    color: white;
 }
 
 .carousel-inner button:hover{
-    color: white !important; /* Cor do texto ao passar o mouse */
-    background-color: #007bff; /* Fundo azul */
+    color: white !important;
+    background-color: #007bff;
 }
 
 .carouselStyleSlide1 img{
@@ -117,14 +153,14 @@ body {
 }
 
 .bg-dark-slide .btnCarousel {
-    color: white; /* Cor do botão */
-    background-color: black; /* Fundo do botão */
-    border: 2px solid white; /* Borda do botão */
+    color: white;
+    background-color: black;
+    border: 2px solid white;
 }
 
 .bg-dark-slide .btnCarousel:hover {
-    background-color: white; /* Cor de fundo ao passar o mouse */
-    color: black !important; /* Cor do texto ao passar o mouse */
+    background-color: white;
+    color: black !important;
 }
 
 .bg-dark-slide h1 {
@@ -167,8 +203,8 @@ body {
 }
 
 .exploraMundo button:hover {
-    outline: 2px solid black; /* Simula a borda interna */
-    outline-offset: -2px; /* Move a borda para dentro */
+    outline: 2px solid black;
+    outline-offset: -2px;
 }
 
 .exploraMundo h1{
@@ -186,25 +222,25 @@ body {
 
 .exploraMundo {
     position: relative;
-    width: 100%; /* O container ocupa toda a largura */
-    height: 650px; /* Define a altura da imagem */
-    background-image: url('../img/FundoExploraOMundo.png'); /* Usa a imagem como fundo */
-    background-size: cover; /* Faz a imagem preencher o container */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição */
-    overflow: hidden; /* Garante que o texto não saia do container */
-    flex-shrink: 0; /* Impede que o elemento diminua ou colapse */
+    width: 100%;
+    height: 650px;
+    background-image: url('../img/FundoExploraOMundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .text-overlay {
-    position: absolute; /* O texto é posicionado relativo ao container pai */
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta o alinhamento */
-    color: white; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    padding: 20px; /* Adiciona espaçamento interno */
-    width: 90%; /* Mantém o texto dentro do container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 90%;
 }
 
 .sobreNosTitulo h1{
@@ -255,26 +291,26 @@ body {
 
 
 .btnSobreNos::after {
-    content: '➔'; /* Ícone da seta */
-    margin-left: 10px; /* Espaço entre o texto e a seta */
-    font-size: 1.2rem; /* Tamanho da seta */
+    content: '➔';
+    margin-left: 10px;
+    font-size: 1.2rem;
     vertical-align: middle;
 }
 
 .carousel-indicators button {
-    background-color: #007bff !important; /* Cor de fundo */
-    width: 90px !important; /* Largura */
-    height: 6px !important; /* Altura */
-    opacity: 0.5; /* Transparência */
+    background-color: #007bff !important;
+    width: 90px !important;
+    height: 6px !important;
+    opacity: 0.5;
 }
 
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: none; /* Cor de fundo */
-    background-image: none; /* Remove a seta padrão */
-    width: 40px; /* Largura */
-    height: 40px; /* Altura */
+    background-color: none;
+    background-image: none;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,19 +318,19 @@ body {
 
 .carousel-control-prev-icon::after,
 .carousel-control-next-icon::after {
-    content: ''; /* Adiciona o conteúdo personalizado */
-    width: 30px; /* Largura da seta */
-    height: 30px; /* Altura da seta */
-    border: solid #007bff; /* Cor e estilo da seta */
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: solid #007bff;
     border-width: 0 8px 8px 0;
 }
 
 .carousel-control-prev-icon::after {
-    transform: rotate(135deg); /* Seta para a esquerda */
+    transform: rotate(135deg);
 }
 
 .carousel-control-next-icon::after {
-    transform: rotate(-45deg); /* Seta para a direita */
+    transform: rotate(-45deg);
 }
 
 .card {
@@ -317,13 +353,13 @@ body {
 }
 
 .estudantes button:hover {
-    color: white !important; /* Cor do texto ao passar o mouse */
-    background-color: #007bff; /* Fundo azul */
+    color: white !important;
+    background-color: #007bff;
 }
 
 .socialMedia a:hover {
-    color: white !important; /* Cor do texto ao passar o mouse */
-    background-color: #007bff !important; /* Fundo azul */
+    color: white !important;
+    background-color: #007bff !important;
 }
 
 .descricao {
@@ -357,7 +393,7 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.formContacto a {
+.formContacto button {
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -365,30 +401,24 @@ body {
 .pesquisa {
     background-color: #f8f4f4;
     display: flex;
-    justify-content: left; /* Centraliza o formulário horizontalmente */
-    padding: 1% 1% 1% 3%; /* Espaçamento ao redor */
+    justify-content: left;
+    padding: 1% 1% 1% 3%;
 }
 
 .pesquisa .form-inline {
-    width: 100%; /* Ocupa toda a largura do container */
-    max-width: 30%; /* Define um limite para o tamanho do formulário */
+    width: 100%;
+    max-width: 30%;
     display: flex;
 }
 
 .pesquisa .form-control {
-    flex: 1; /* Faz o campo de pesquisa ocupar o máximo de espaço disponível */
-    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na esquerda */
-}
-
-@media (max-width: 576px) {
-    .pesquisa .form-control {
-        width: auto;         /* Aumenta a largura da barra de pesquisa para 100% da largura da tela */
-    }
+    flex: 1;
+    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
 }
 
 .pesquisa .btn {
     margin-left: 3%;
-    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na direita */
+    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
 }
 
 .estudanteHenrique {
@@ -396,10 +426,10 @@ body {
 }
 
 .estudanteImg {
-    max-height: 500px; /* Altura máxima da imagem */
-    max-width: 100%; /* Largura máxima proporcional */
-    object-fit: cover; /* Ajusta a imagem sem distorção */
-    border-radius: 10px; /* Mantém os cantos arredondados */
+    max-height: 600px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     padding: 7%;
 }
 
@@ -451,14 +481,6 @@ body {
     left: 10%;
 }
 
-@media (max-width: 767px) {
-    .flag-img {
-        height: 244px;
-        margin-right: 28%;
-        margin-bottom: 4%;
-    }
-}
-
 .country-info {
     font-size: 1.2rem;
     line-height: 1.5;
@@ -475,14 +497,12 @@ body {
     background-color: #f8f4f4; 
 }
 
-/* Ajuste das imagens */
 .card-paises img {
     height: 250px; 
     object-fit: cover; 
     width: 100%; 
 }
 
-/* Conteúdo do card */
 .card-paises-body {
     flex-grow: 1; 
     display: flex;
@@ -491,15 +511,13 @@ body {
     text-align: center;
 }
 
-/* Links do card */
 .card-paises a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Estilo do card */
 .card-fav {
-    height: 350px; /* Altura fixa */
+    height: 350px;
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -509,21 +527,18 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Imagem do card */
 .card-fav-img-top {
     height: 200px;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    object-fit: cover;
 }
 
-/* Corpo do card */
 .card-fav-body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Alinha o conteúdo */
-    flex-grow: 1; /* Expande o conteúdo para preencher a altura disponível */
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
-/* Título e conteúdo */
 .card-fav-body .card-fav-title {
     font-size: 1.2rem;
     font-weight: bold;
@@ -533,9 +548,8 @@ body {
     font-size: 1rem;
 }
 
-/* Estilo do botão */
 .btn {
-    margin-top: auto; /* Faz com que o botão vá para o fundo do card */
+    margin-top: auto;
 }
 
 .card-favoritos {
@@ -549,14 +563,12 @@ body {
     background-color: #f8f4f4; 
 }
 
-/* Ajuste das imagens */
 .card-favoritos img {
     height: 250px; 
     object-fit: cover; 
     width: 100%; 
 }
 
-/* Conteúdo do card */
 .card-favoritos-body {
     flex-grow: 1; 
     display: flex;
@@ -574,10 +586,10 @@ body {
 } 
 
 .card-favoritos button {
-    padding: 1% 2%; /* Ajusta o tamanho do botão */
-    line-height: 2; /* Ajusta a altura da linha */
-    border-radius: 3px; /* Bordas arredondadas menores */
-    margin-bottom: 2%; /* Adiciona espaço abaixo do botão */
+    padding: 1% 2%;
+    line-height: 2;
+    border-radius: 3px;
+    margin-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
 }
