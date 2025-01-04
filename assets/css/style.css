@@ -10,34 +10,67 @@ body {
     flex-direction: column;
 }
 
-@media (max-width: 767px) {
-    /* CAROUSEL */
-    /* CAROUSEL */
+@media (max-width: 1020px) {
     #carouselExampleCaptions .carousel-item img {
         display: none;
     }
 
-    /* Ajusta o padding do texto */
     #carouselExampleCaptions .carousel-item .text-start {
-        padding: 50px; /* Espaçamento horizontal */
+        padding: 50px;
     }
+}
 
-    /* NAVBAR */
-    /* NAVBAR */
-    .navbar-toggler {
-        position: absolute; /* Faz o botão flutuar à direita */
-        right: 4%; /* Ajusta a distância à direita conforme necessário */
-        bottom: 30%;
+@media (max-width: 1000px) {
+    .pesquisa .form-control {
+        width: auto;         /* Aumenta a largura da barra de pesquisa para 100% da largura da tela */
     }
+}
 
-    /* Ajusta os itens da navbar para ficarem mais próximos do lado direito na versão mobile */
-    .navbar-nav {
-        margin-left: 21%; /* Empurra os itens de navegação para a direita */
+.cardHome {
+    /* Media query específica */
+    @media (min-width: 964px) and (max-width: 1196px){
+        .col-md-3, .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.cardHome {
+    /* Media query específica */
+    @media (max-width: 963px){
+        .col-md-3, .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+/* Aplica apenas quando a página específica for carregada */
+.cardSobre {
+    /* Media query específica */
+    @media (max-width: 963px) {
+        .col-md-3, .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
 }
 
 .navbar {
     padding-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbarFooter {
@@ -45,20 +78,18 @@ body {
     margin-right: 15%;
 }
 
+.container-fluid.footer .navbar-nav .nav-item {
+    margin: 10px;
+}
+
 .footer {
     background-color: #f8f4f4;
     padding-top: 3%;
-    justify-content: center;
-    margin-top: auto;
 }
 
 .logo img {
     height: 90px;
     margin-left: 40%;
-}
-
-.NavBar {
-    padding-right: 17%;
 }
 
 .NavBarSobre {
@@ -72,8 +103,8 @@ body {
 }
 
 #contactos .nav-link:hover {
-    color: white !important; /* Cor do texto ao passar o mouse */
-    background-color: #007bff; /* Fundo azul */
+    color: white !important;
+    background-color: #007bff;
 }
 
 #contactos .nav-link{
@@ -87,13 +118,13 @@ body {
 }
 
 .carousel .carousel-item:nth-child(2) {
-    background-color: black; /* Fundo preto para o segundo slide */
-    color: white; /* Garante que o texto fique visível */
+    background-color: black;
+    color: white;
 }
 
 .carousel-inner button:hover{
-    color: white !important; /* Cor do texto ao passar o mouse */
-    background-color: #007bff; /* Fundo azul */
+    color: white !important;
+    background-color: #007bff;
 }
 
 .carouselStyleSlide1 img{
@@ -380,12 +411,6 @@ body {
     border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na esquerda */
 }
 
-@media (max-width: 576px) {
-    .pesquisa .form-control {
-        width: auto;         /* Aumenta a largura da barra de pesquisa para 100% da largura da tela */
-    }
-}
-
 .pesquisa .btn {
     margin-left: 3%;
     border-radius: 0.25rem 0.25rem 0.25rem 0.25rem; /* Bordas arredondadas apenas na direita */
@@ -396,7 +421,7 @@ body {
 }
 
 .estudanteImg {
-    max-height: 500px; /* Altura máxima da imagem */
+    max-height: 600px; /* Altura máxima da imagem */
     max-width: 100%; /* Largura máxima proporcional */
     object-fit: cover; /* Ajusta a imagem sem distorção */
     border-radius: 10px; /* Mantém os cantos arredondados */
