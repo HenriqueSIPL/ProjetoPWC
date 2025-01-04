@@ -29,8 +29,8 @@ body {
 @media (max-width: 576px) {
     .flag-img {
         height: 300px;
-        margin-left: 1%;
-        margin-right: 100%;
+        margin-left: 1%;  /* Ajuste leve da margem à esquerda */
+        margin-right: auto;  /* Garante que a margem à direita seja automática */
         margin-bottom: 2%;
     }
 }
@@ -479,14 +479,13 @@ body {
     margin-bottom: 20px;
     font-family: 'Courier New', Courier, monospace;
 }
+
 .flag-img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     margin-bottom: 8%;
-    position: relative;
-    left: 10%;
 }
 
 .country-info {
@@ -600,43 +599,5 @@ body {
     margin-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.detalhes {
-    margin-top: 20px;
-    margin-left: 20%;
-    margin-right: 5%;
-    width: 80%;
-    border: 1px solid #343a40;
-}
-
-.detalhes td,
-.detalhes th {
-    border: none; /* Remove todas as bordas internas */
-}
-
-.detalhes tr:last-child {
-    border-bottom: 1px solid #343a40; /* Apenas a última linha terá a borda inferior */
-}
-
-@media (max-width: 767px) {
-    .row.align-items-center {
-        flex-direction: column; /* Coloca os elementos em coluna no mobile */
-    }
-
-    .flag-img {
-        margin-bottom: 30px; /* Mais espaço no mobile */
-        margin-left: 12%;
-    }
-
-    .table {
-        width: 100%;  /* Certifica-se de que a tabela ocupa toda a largura disponível */
-        table-layout: fixed;  /* Impede que a tabela ultrapasse os limites */
-    }
-
-    .detalhes {
-        margin-left: auto; /* Centraliza a tabela horizontalmente */
-        margin-right: auto;
-    }
 }
 
